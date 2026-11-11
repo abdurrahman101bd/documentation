@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown Editor for Android</title>
+<meta name="description" content="A fast, offline and private Markdown editor for Android with live split preview, biometric lock and local backups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Markdown Editor</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#stack">Tech stack</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-solid btn-sm" href="https://github.com/abdurrahman101bd/markdown-editor/releases">Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <h1>Write Markdown the way it should feel on a phone.</h1>
+      <p class="lead">A fast, completely offline and privacy focused editor. Write on one side, see the rendered result on the other, and keep every note on your own device.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="https://github.com/abdurrahman101bd/markdown-editor/releases">Download APK</a>
+        <a class="btn btn-line" href="https://github.com/abdurrahman101bd/markdown-editor">View source code</a>
+      </div>
+    </div>
+
+    <div class="device" aria-hidden="true">
+      <div class="device-bar"><span></span><span></span><span></span><b>release-notes.md</b></div>
+      <div class="device-body">
+        <pre class="pane src"><i class="h"># Release notes</i>
+
+Offline first and
+<i class="b">**private by design**</i>.
+
+<i class="h">## Highlights</i>
+- Live split preview
+- Biometric lock
+- Local ZIP backups
+
+<i class="c">`auto_save = true`</i><span class="caret"></span></pre>
+        <div class="pane out">
+          <h4>Release notes</h4>
+          <p>Offline first and <strong>private by design</strong>.</p>
+          <h5>Highlights</h5>
+          <ul><li>Live split preview</li><li>Biometric lock</li><li>Local ZIP backups</li></ul>
+          <code>auto_save = true</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts wrap" aria-label="At a glance">
+    <div><strong>0</strong><span>Trackers, ads or accounts</span></div>
+    <div><strong>100%</strong><span>Offline, stored locally</span></div>
+    <div><strong>3</strong><span>Themes: light, dark, system</span></div>
+    <div><strong>API 26</strong><span>Works on Android 8.0 and above</span></div>
+  </section>
+
+  <section class="section wrap" id="features">
+    <div class="head">
+      <h2>Everything a serious writing tool needs. Nothing it does not.</h2>
+      <p>Built with native Android components and Material Design 3, so it stays smooth even with thousands of notes.</p>
+    </div>
+    <div class="bento">
+      <article class="card c-wide">
+        <h3>Real time split preview</h3>
+        <p>Raw Markdown on one side, formatted output on the other. Rendering is powered by Markwon for native performance, and the layout adapts to portrait and landscape.</p>
+        <div class="tabs" role="tablist">
+          <button role="tab" aria-selected="true" data-tab="0">Split</button>
+          <button role="tab" aria-selected="false" data-tab="1">Full screen</button>
+          <button role="tab" aria-selected="false" data-tab="2">Print and share</button>
+        </div>
+        <p class="tab-out" id="tab-out">Write and read side by side with zero latency. Quick insert tools add bold, italic, headings, code blocks, tables and links in one tap.</p>
+      </article>
+      <article class="card">
+        <h3>Biometric app lock</h3>
+        <p>Protect notes with fingerprint, face unlock or device PIN. Authentication is requested on open and when returning from the background.</p>
+      </article>
+      <article class="card">
+        <h3>Auto save and undo</h3>
+        <p>A customizable auto save timer and a robust undo and redo manager mean you never lose progress.</p>
+      </article>
+      <article class="card">
+        <h3>Archive and trash</h3>
+        <p>Archive what you want to keep, trash what you do not. Trash can purge old notes automatically after a time you choose.</p>
+      </article>
+      <article class="card c-wide c-contrast">
+        <h3>Complete offline backups</h3>
+        <p>Export notes and settings as a single ZIP file and import it on any device. Scheduled background backups run through WorkManager, and you decide where the file goes: local storage, an SD card or your own cloud.</p>
+      </article>
+      <article class="card">
+        <h3>Light, dark and system</h3>
+        <p>A clean Material 3 interface with list and grid views, and a styled WebView reader that follows your theme.</p>
+      </article>
+      <article class="card">
+        <h3>Images and links</h3>
+        <p>Load remote images with Glide. Hyperlinks are detected and underlined automatically.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="workflow">
+    <div class="split">
+      <div class="head">
+        <h2>Three ways to read your writing.</h2>
+        <p>Move between drafting, reading and sharing without leaving the app or touching a server.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Draft in split view</h3><p>Type Markdown and watch it render instantly beside your text.</p></li>
+        <li><h3>Read in full screen</h3><p>A WebView with a custom Marked.js engine gives styled code blocks, tables and images.</p></li>
+        <li><h3>Export and share</h3><p>Send notes as PDF, as a Markdown file, or as plain text.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section wrap" id="privacy">
+    <div class="panel">
+      <div class="head">
+        <h2>Your notes never leave your device.</h2>
+        <p>Notes live in a local Room database. There are no trackers, no analytics, no ads, no subscription and no account to create.</p>
+      </div>
+      <ul class="ticks">
+        <li>Works completely offline</li>
+        <li>Optional screenshot blocking with one toggle</li>
+        <li>Only the permissions it truly needs</li>
+        <li>Independent backups, no cloud service required</li>
+      </ul>
+      <div class="perm-wrap"><table class="perm">
+        <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+        <tbody>
+          <tr><td>INTERNET</td><td>Loading remote images in Markdown</td></tr>
+          <tr><td>POST_NOTIFICATIONS</td><td>Auto backup results on Android 13 and above</td></tr>
+          <tr><td>USE_BIOMETRIC</td><td>App lock</td></tr>
+          <tr><td>READ and WRITE_EXTERNAL_STORAGE</td><td>Auto backups on Android 8.0 to 9.0 only</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="stack">
+    <div class="head">
+      <h2>Built on proven native libraries.</h2>
+    </div>
+    <dl class="stack">
+      <div><dt>Language</dt><dd>Java</dd></div>
+      <div><dt>Database</dt><dd>Room</dd></div>
+      <div><dt>Preview</dt><dd>Markwon and Marked.js</dd></div>
+      <div><dt>Background tasks</dt><dd>WorkManager</dd></div>
+      <div><dt>Security</dt><dd>AndroidX Biometric</dd></div>
+      <div><dt>Interface</dt><dd>Material 3, RecyclerView</dd></div>
+      <div><dt>Images</dt><dd>Glide</dd></div>
+      <div><dt>Minimum SDK</dt><dd>API 26 (Android 8.0)</dd></div>
+    </dl>
+  </section>
+
+  <section class="section wrap" id="install">
+    <div class="final">
+      <h2>Install in under a minute.</h2>
+      <ol class="inline-steps">
+        <li>Download the APK from Releases</li>
+        <li>Allow installs from unknown sources</li>
+        <li>Open the APK and install</li>
+      </ol>
+      <div class="cta">
+        <a class="btn btn-solid" href="https://github.com/abdurrahman101bd/markdown-editor/releases">Download APK</a>
+        <a class="btn btn-line" href="https://github.com/abdurrahman101bd/markdown-editor/issues">Report a bug</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Markdown Editor. Licensed under the MIT License.</p>
+    <nav aria-label="Social">
+      <a href="https://github.com/abdurrahman101bd">GitHub</a>
+      <a href="https://www.linkedin.com/in/abdurrahman101bd">LinkedIn</a>
+      <a href="https://x.com/abdurrahman101b">Twitter</a>
+      <a href="https://www.facebook.com/abdurrahman101bd">Facebook</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
